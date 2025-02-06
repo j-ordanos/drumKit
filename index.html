@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drum Kit</title>
+  </head>
+  <body>
+    <div style="position: relative">
+      <img
+        src="assets/drumsKit.jpg"
+        alt="Drum Kit"
+        style="width: 90% margin = auto"
+      />
+      <svg
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          id="crash"
+          d="M82.5 7.5C62.3333 15.6667 17.7 35.5 0.5 49.5V314.5L6.5 321.5L58.5 338H98H124.5L172 327L220 304.5L263.5 272.5L293.5 234.5L314 190.5L323.5 146L314 97L293.5 61L263.5 33L203 7.5L154 0.5L82.5 7.5Z"
+          fill="transparent"
+        />
+
+        <path
+          id="rack-tom"
+          d="M111 24L102 0.5H187L237.5 34L277.5 98V146L248.5 219.5L175 266.5L90 257.5L37 219.5L1.5 146L7 98L37 42L62 17L82 42L111 24Z"
+          fill="transparent"
+          transform="translate(320, 95)"
+        />
+
+        <path
+          id="splash"
+          d="M10.5 49C7 39.5 0.299995 16.6 1.49999 1H232L219.5 42L185.5 76L134.5 96.5H86.5L46 82L10.5 49Z"
+          fill="transparent"
+          transform="translate(490, 0)"
+        />
+
+        <path
+          id="china-cymbal"
+          d="M0.5 158L14.5 87.5L45 70.5L66.5 44L80.5 1H336.5L396 55.5L361.5 83L336.5 128.5L322 187V236L336.5 287L361.5 335L265.5 371.5H202L104 335L50.5 287L14.5 227L0.5 158Z"
+          fill="transparent"
+          transform="translate(645, 0)"
+        />
+
+        <path
+          id="ride"
+          d="M287 15.5L310 25V387L279 400.5L213.5 408.5L158 400.5L99 375.5L52.5 338L18 286L1 230.5V175.5L10 136L27 100L52.5 67L90 36L154.5 5.5L210 1L251 5.5L287 15.5Z"
+          fill="transparent"
+          transform="translate(970, 10)"
+        />
+        <path
+          id="hi-hat"
+          d="M39.5 16.5L4 39L0.5 336.5L33.5 339L98.5 328.5L156.5 299L210.5 252.5L247 194.5L260.5 133.5L251.5 79L210.5 26.5L156.5 0.5H98.5L39.5 16.5Z"
+          fill="transparent"
+          transform="translate(-2, 350)"
+        />
+
+        <path
+          id="snare"
+          d="M105 10L75.5 24.5L47.5 45L19 78V92.5L30.5 100.5L19 132.5H0.5V148.5L6.5 186L39.5 240L90.5 272L150.5 277.5L213 260.5L272 210.5L289 165.5L293.5 111L272 60L239 24.5L187 1H150.5L105 10Z"
+          fill="transparent"
+          transform="translate(325, 400)"
+        />
+
+        <path
+          id="floor-tom"
+          d="M47.5 38L90.5 13H153L182.5 1.5L249.5 38L297 92.5L276 102.5L289 136.5L312 132V165L302 211.5L266.5 264.5L205.5 297.5H128L76 275L27 229.5L6.5 201L27 183L58 154.5L76 136.5L90.5 125L97.5 112.5H90.5L6.5 183L1 125L17 76L47.5 38Z"
+          fill="transparent"
+          transform="translate(765, 365)"
+        />
+
+        <path
+          id="bass"
+          d="M1 155L30.5 1H72.5L83.5 10L104 59L121 172L96.5 197.5H46.5L11 178L1 155Z"
+          stroke="red"
+          fill="#ffffff96"
+          stroke-width="2"
+          transform="translate(630, 300)"
+        />
+      </svg>
+      <div
+        id="crash"
+        class="label"
+        style="top: 25%; left: 10%"
+        data-key="A"
+        onclick="playSound('A')"
+      >
+        A → Crash
+      </div>
+      <div
+        id="rack-tom"
+        class="label"
+        style="top: 25%; left: 35%"
+        data-key="S"
+        onclick="playSound('S')"
+      >
+        S → Rack Tom
+      </div>
+      <div
+        id="bass"
+        class="label"
+        style="top: 52%; left: 54%"
+        data-key="D"
+        onclick="playSound('D')"
+      >
+        D → Bass
+      </div>
+      <div
+        id="hi-hat"
+        class="label"
+        style="top: 55%; left: 13%"
+        data-key="F"
+        onclick="playSound('F')"
+      >
+        F → Hi-Hat
+      </div>
+      <div
+        id="snare"
+        class="label"
+        style="top: 60%; left: 37%"
+        data-key="G"
+        onclick="playSound('G')"
+      >
+        G → Snare
+      </div>
+      <div
+        id="china-cymbal"
+        class="label"
+        style="top: 25%; left: 65%"
+        data-key="H"
+        onclick="playSound('H')"
+      >
+        H → China Cymbal
+      </div>
+      <div
+        id="ride"
+        class="label"
+        style="top: 15%; left: 90%"
+        data-key="J"
+        onclick="playSound('J')"
+      >
+        J → Ride
+      </div>
+      <div
+        id="floor-tom"
+        class="label"
+        style="top: 55%; left: 73%"
+        data-key="K"
+        onclick="playSound('K')"
+      >
+        K → Floor Tom
+      </div>
+      <div
+        id="splash"
+        class="label"
+        style="top: 5%; left: 47%"
+        data-key="L"
+        onclick="playSound('L')"
+      >
+        L → Splash
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
